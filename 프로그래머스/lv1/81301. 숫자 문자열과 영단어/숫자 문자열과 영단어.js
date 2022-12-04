@@ -4,6 +4,7 @@ function solution(s) {
     
     for (let i=0; i<10; i++) {
     let answer = s.replaceAll(arr[i],i);
+        console.log(answer)
     s = answer;
     }
     return Number(s);
