@@ -22,8 +22,7 @@ function solution(dartResult) {
             }
             if (newArr[i] === '#') {
                 answer[answer.length-1] *= -1;
-            }
-            
+            }    
         }
     }
     
