@@ -5,5 +5,5 @@ function solution(food) {
         if (food[i] > 1) answer += String(i).repeat(Math.floor(food[i] / 2));
     }
         
-    return answer + '0' + answer.split('').reverse().join('');
+    return answer + '0' + [...answer].reverse().join('');
 }
