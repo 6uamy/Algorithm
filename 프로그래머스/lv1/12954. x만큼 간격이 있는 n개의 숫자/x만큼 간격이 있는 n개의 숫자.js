@@ -5,5 +5,6 @@ function solution(x, n) {
         answer.push(x)
         x += a;
     }
+    
     return answer;
 }
