@@ -1,12 +1,12 @@
 function solution(numbers) {
-    let addNumber = [];
+    const num = [];
     
-    for (let i=0; i<numbers.length; i++) {
-        for(let j=i+1; j<numbers.length; j++) {
-            addNumber.push(numbers[i] + numbers[j]);
-        }
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = i + 1; j < numbers.length; j++) {
+            num.push(numbers[i] + numbers[j]);
+        }    
     }
     
-    const answer = [...new Set(addNumber)].sort((a, b) => a - b);
-    return answer;
+    const result = [...new Set(num)].sort((a, b) => a - b);
+    return result;
 }
