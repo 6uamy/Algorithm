@@ -10,31 +10,9 @@ function solution(survey, choices) {
     for (let i = 0; i < survey.length; i++) {
         const [front, back] = survey[i].split('');
         if (choices[i] > 4) {
-            switch(choices[i]) {
-                case 5:
-                    mbti.set(back, mbti.get(back) + 1);
-                    break;
-                case 6:
-                    mbti.set(back, mbti.get(back) + 2);
-                    break;
-                case 7:
-                mbti.set(back, mbti.get(back) + 3);
-                break;
-                    
-            }
+            mbti.set(back, mbti.get(back) + Math.abs(choices[i] - 4));
         } else if (choices[i] < 4) {
-            switch(choices[i]) {
-                case 3:
-                    mbti.set(front, mbti.get(front) + 1);
-                    break;
-                case 2:
-                    mbti.set(front, mbti.get(front) + 2);
-                    break;
-                case 1:
-                mbti.set(front, mbti.get(front) + 3);
-                break;
-                    
-            }
+            mbti.set(front, mbti.get(front) + Math.abs(choices[i] - 4));
         }
     }
     
