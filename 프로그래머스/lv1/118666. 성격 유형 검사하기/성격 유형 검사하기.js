@@ -38,26 +38,10 @@ function solution(survey, choices) {
         }
     }
     
-    if (mbti.get('R') >= mbti.get('T')) {
-        answer += 'R';
-    } else if (mbti.get('R') < mbti.get('T')) {
-        answer += 'T';
-    }
-    if (mbti.get('C') >= mbti.get('F')) {
-        answer += 'C';
-    } else if (mbti.get('C') < mbti.get('F')) {
-        answer += 'F';
-    }
-    if (mbti.get('J') >= mbti.get('M')) {
-        answer += 'J';
-    } else if (mbti.get('J') < mbti.get('M')) {
-        answer += 'M';
-    }
-    if (mbti.get('A') >= mbti.get('N')) {
-        answer += 'A';
-    } else if (mbti.get('A') < mbti.get('N')) {
-        answer += 'N';
-    }
+    answer += mbti.get('R') >= mbti.get('T') ? 'R' : 'T';
+    answer += mbti.get('C') >= mbti.get('F') ? 'C' : 'F';
+    answer += mbti.get('J') >= mbti.get('M') ? 'J' : 'M';
+    answer += mbti.get('A') >= mbti.get('N') ? 'A' : 'N';
     
     return answer;
 }
